@@ -6,7 +6,7 @@ import 'app.dart';
 
 void main() {
   // todo: add widgets binding
-  // todo: init local storage
+  // todo: init local storagesdafasdfasdfasdfasdf
   //todo: await native splash
   //todo: initialize firebase
   //todo: initialize authentication
