@@ -36,7 +36,7 @@ dependencies:
   intl: ^0.18.1
   logger: ^2.0.1
   url_launcher: ^6.1.12
-
+  flutter_native_splash: ^2.3.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -103,7 +103,7 @@ flutter:
           weight: 500
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 700
-        - asset: assets/Poppins-SemiBold.ttf
+        - asset: assets/fonts/Poppins-SemiBold.ttf
           weight: 600
   #   - family: Trajan Pro
   #     fonts:
