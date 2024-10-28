@@ -1,11 +1,11 @@
 flutter_native_splash:
-  color: "#0000FF"
+  color: "#FFFFFF"
   color_dark: "#272727"
   image: assets/logos/logo-tek.png
   image_dark: assets/logos/logo-tek.png
 
   android_12:
-    color: "#0000FF"
+    color: "#FFFFFF"
     color_dark: "#272727"
     image: assets/logos/logo-tek.png
     image_dark: assets/logos/logo-tek.png

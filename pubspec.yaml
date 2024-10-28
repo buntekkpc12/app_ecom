@@ -37,6 +37,7 @@ dependencies:
   logger: ^2.0.1
   url_launcher: ^6.1.12
   flutter_native_splash: ^2.3.2
+  smooth_page_indicator: ^1.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -81,6 +82,10 @@ flutter:
     - assets/logos/logo-tek.png
     - assets/logos/logofacebook.png
     - assets/logos/logogoogle.png
+    - assets/images/on_boarding_images/
+    - assets/images/on_boarding_images/dile.gif
+    - assets/images/on_boarding_images/shop.gif
+    - assets/images/on_boarding_images/searching.gif
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
