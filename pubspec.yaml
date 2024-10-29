@@ -86,6 +86,7 @@ flutter:
     - assets/images/on_boarding_images/dile.gif
     - assets/images/on_boarding_images/shop.gif
     - assets/images/on_boarding_images/searching.gif
+    - assets/images/animations/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
