@@ -77,7 +77,9 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/icons/categories/
     - assets/icons/brands/
+    - assets/logos/
     - assets/logos/
     - assets/logos/logo-tek.png
     - assets/logos/logofacebook.png
