@@ -1,4 +1,6 @@
+import 'package:ecommerce/common/widgets/appbar.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
+import 'package:ecommerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/container/circular_container.dart';
@@ -11,13 +13,22 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             TPrimayHeaderContainer(
               child: Column(
-                children: [],
+                children: [
+                  TAppBar(
+                    title: Column(
+                      children: [
+                        Text(TTexts.homeAppbarTitle, style: Theme.of(context).textTheme.labelMedium!.apply(color: TColors.grey),),
+                        Text(TTexts.homeAppbarSubTitle, style: Theme.of(context).textTheme.labelSmall!.apply(color: TColors.white),),
+                      ],
+                    ),
+                  )
+                ],
               ),
             )
           ],
