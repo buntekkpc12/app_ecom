@@ -42,5 +42,14 @@ class NavigationController extends GetxController {
 
   final screens = [
     const HomeScreen(),
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.red,
+    ),
   ];
 }

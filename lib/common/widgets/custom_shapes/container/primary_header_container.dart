@@ -22,7 +22,6 @@ class TPrimayHeaderContainer extends StatelessWidget {
           height: 400,
           child: Stack(
             children: [
-              /// -- background custom shapes
               Positioned(
                 top: -150,
                 right: -250,
@@ -34,6 +33,9 @@ class TPrimayHeaderContainer extends StatelessWidget {
                 right: -300,
                 child: TCircularContainer(
                     backgroundColor: TColors.textWhite.withOpacity(0.1)),
+              ),
+              Positioned.fill(
+                child: child,
               ),
             ],
           ),
