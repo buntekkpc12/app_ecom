@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import '../../../../common/widgets/custom_shapes/container/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/container/search_container.dart';
 import '../../../../common/widgets/images/t_rounded_image.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
@@ -19,11 +20,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimayHeaderContainer(
+            const TPrimayHeaderContainer(
               child: Column(
                 children: [
                   THomeAppBar(),
@@ -55,7 +56,7 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
               child: TPromoSlider(
                 banners: [
@@ -65,7 +66,10 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-            TProductCardVertical(),
+            TGridLayout(
+              itemCount: 4,
+              itemBuilder: (_, index) => const TProductCardVertical(),
+            ),
           ],
         ),
       ),

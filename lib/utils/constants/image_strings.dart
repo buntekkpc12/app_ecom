@@ -117,4 +117,22 @@ class TImages {
       "assets/images/products/men/women-09.jpg";
   static const String productImage58 =
       "assets/images/products/men/women-10.jpg";
+
+  //shoes image
+  static const String productImage59 =
+      "assets/images/products/shoes/shoes1.png";
+  static const String productImage60 =
+      "assets/images/products/shoes/shoes2.png";
+  static const String productImage61 =
+      "assets/images/products/shoes/shoes3.png";
+  static const String productImage62 =
+      "assets/images/products/shoes/shoes4.png";
+  static const String productImage63 =
+      "assets/images/products/shoes/shoes5.png";
+  static const String productImage64 =
+      "assets/images/products/shoes/shoes6.png";
+  static const String productImage65 =
+      "assets/images/products/shoes/shoes7.png";
+  static const String productImage66 =
+      "assets/images/products/shoes/shoes8.png";
 }
