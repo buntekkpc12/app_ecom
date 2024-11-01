@@ -10,19 +10,30 @@ class THomeCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final categories = [
+      {'image': TImages.shoeIcon, 'title': 'Shoes'},
+      {'image': TImages.clothIcon, 'title': 'Clothes'},
+      {'image': TImages.cosmeticsIcon, 'title': 'Cosmetics'},
+      {'image': TImages.sportIcon, 'title': 'Sports'},
+      {'image': TImages.electronicsIcon, 'title': 'Electronics'},
+      {'image': TImages.furnitureIcon, 'title': 'Furniture'},
+    ];
+
     return SizedBox(
       height: 80,
       child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: 6,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (_, index) {
-            return TVerticalImageText(
-              image: TImages.shoeIcon,
-              title: 'Shoes',
-              onTap: () {},
-            );
-          }),
+        shrinkWrap: true,
+        itemCount: categories.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (_, index) {
+          final category = categories[index];
+          return TVerticalImageText(
+            image: category['image']!,
+            title: category['title']!,
+            onTap: () {},
+          );
+        },
+      ),
     );
   }
 }
