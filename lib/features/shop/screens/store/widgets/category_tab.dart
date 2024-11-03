@@ -10,15 +10,16 @@ import '../../../../../utils/constants/sizes.dart';
 class TBrandCard extends StatelessWidget {
   const TBrandCard({
     super.key,
+    this.showBorder = true,
   });
-
+  final bool showBorder;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
       child: TRoundedContainer(
         padding: const EdgeInsets.all(TSizes.sm),
-        showBorder: true,
+        showBorder: showBorder,
         backgroundColor: Colors.transparent,
         child: Row(
           children: [

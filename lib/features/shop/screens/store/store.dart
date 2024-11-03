@@ -117,7 +117,9 @@ class StoreScreen extends StatelessWidget {
                     margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
                     child: Column(
                       children: [
-                        const TBrandCard(),
+                        const TBrandCard(
+                          showBorder: false,
+                        ),
                         Row(
                           children: [
                             TRoundedContainer(
@@ -127,7 +129,38 @@ class StoreScreen extends StatelessWidget {
                                       ? TColors.darkerGrey
                                       : TColors.light,
                               margin: const EdgeInsets.only(right: TSizes.sm),
-                            )
+                              padding: const EdgeInsets.all(TSizes.md),
+                              child: const Image(
+                                image: AssetImage(TImages.productImage1),
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                            TRoundedContainer(
+                              height: 100,
+                              backgroundColor:
+                                  THelperFunctions.isDarkMode(context)
+                                      ? TColors.darkerGrey
+                                      : TColors.light,
+                              margin: const EdgeInsets.only(right: TSizes.sm),
+                              padding: const EdgeInsets.all(TSizes.md),
+                              child: const Image(
+                                image: AssetImage(TImages.productImage2),
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                            TRoundedContainer(
+                              height: 100,
+                              backgroundColor:
+                                  THelperFunctions.isDarkMode(context)
+                                      ? TColors.darkerGrey
+                                      : TColors.light,
+                              margin: const EdgeInsets.only(right: TSizes.sm),
+                              padding: const EdgeInsets.all(TSizes.md),
+                              child: const Image(
+                                image: AssetImage(TImages.productImage3),
+                                fit: BoxFit.contain,
+                              ),
+                            ),
                           ],
                         )
                       ],
