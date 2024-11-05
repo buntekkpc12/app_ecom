@@ -13,6 +13,8 @@ import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/appbar/tabbar.dart';
+import '../../../../common/widgets/brands/brand_card.dart';
+import '../../../../common/widgets/brands/brand_show_case.dart';
 import '../../../../common/widgets/images/t_circular_image.dart';
 import '../../../../common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 
@@ -105,70 +107,13 @@ class StoreScreen extends StatelessWidget {
               )
             ];
           },
-          body: TabBarView(children: [
-            Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: Column(
-                children: [
-                  TRoundedContainer(
-                    showBorder: true,
-                    borderColor: TColors.darkGrey,
-                    backgroundColor: Colors.transparent,
-                    margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
-                    child: Column(
-                      children: [
-                        const TBrandCard(
-                          showBorder: false,
-                        ),
-                        Row(
-                          children: [
-                            TRoundedContainer(
-                              height: 100,
-                              backgroundColor:
-                                  THelperFunctions.isDarkMode(context)
-                                      ? TColors.darkerGrey
-                                      : TColors.light,
-                              margin: const EdgeInsets.only(right: TSizes.sm),
-                              padding: const EdgeInsets.all(TSizes.md),
-                              child: const Image(
-                                image: AssetImage(TImages.productImage1),
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                            TRoundedContainer(
-                              height: 100,
-                              backgroundColor:
-                                  THelperFunctions.isDarkMode(context)
-                                      ? TColors.darkerGrey
-                                      : TColors.light,
-                              margin: const EdgeInsets.only(right: TSizes.sm),
-                              padding: const EdgeInsets.all(TSizes.md),
-                              child: const Image(
-                                image: AssetImage(TImages.productImage2),
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                            TRoundedContainer(
-                              height: 100,
-                              backgroundColor:
-                                  THelperFunctions.isDarkMode(context)
-                                      ? TColors.darkerGrey
-                                      : TColors.light,
-                              margin: const EdgeInsets.only(right: TSizes.sm),
-                              padding: const EdgeInsets.all(TSizes.md),
-                              child: const Image(
-                                image: AssetImage(TImages.productImage3),
-                                fit: BoxFit.contain,
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
+          body: const TabBarView(children: [
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
+            TCategoryTab(),
           ]),
         ),
       ),

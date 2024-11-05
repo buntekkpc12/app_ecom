@@ -28,6 +28,9 @@ class TImages {
   static const String verifyIllustration =
       "assets/images/animations/work-out.gif";
 
+  //profile
+  static const String user = "assets/images/user/profile2.png";
+
   //icon logo category
   static const String sportIcon = "assets/icons/categories/sportIcon.png";
   static const String clothIcon = "assets/icons/categories/clothIcon.png";

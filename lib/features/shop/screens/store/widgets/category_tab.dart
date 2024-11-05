@@ -1,58 +1,57 @@
+import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
+import 'package:ecommerce/common/widgets/products/product_cart/product_cart_vertical.dart';
+import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../common/widgets/custom_shapes/container/rounded_container.dart';
-import '../../../../../common/widgets/images/t_circular_image.dart';
-import '../../../../../common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
-import '../../../../../utils/constants/enums.dart';
+import '../../../../../common/widgets/brands/brand_show_case.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 
-class TBrandCard extends StatelessWidget {
-  const TBrandCard({
-    super.key,
-    this.showBorder = true,
-  });
-  final bool showBorder;
+class TCategoryTab extends StatelessWidget {
+  const TCategoryTab({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: TRoundedContainer(
-        padding: const EdgeInsets.all(TSizes.sm),
-        showBorder: showBorder,
-        backgroundColor: Colors.transparent,
-        child: Row(
-          children: [
-            const Flexible(
-              child: TCircularImage(
-                isNetworkImage: false,
-                image: TImages.clothIcon,
-                backgroundColor: Colors.transparent,
-              ),
-            ),
-            const SizedBox(
-              width: TSizes.spaceBtwItems / 2,
-            ),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const TBrandTiltleWithVerifiedIcon(
-                    title: 'Nike',
-                    brandTextSize: TextSizes.large,
-                  ),
-                  Text(
-                    '256 products',
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.labelMedium,
-                  )
+    return ListView(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          child: Column(
+            children: [
+              const TBrandShowCase(
+                images: [
+                  TImages.productImage1,
+                  TImages.productImage2,
+                  TImages.productImage3
                 ],
               ),
-            )
-          ],
+              const TBrandShowCase(
+                images: [
+                  TImages.productImage4,
+                  TImages.productImage5,
+                  TImages.productImage6
+                ],
+              ),
+              TSectionHeading(
+                title: 'You might like',
+                showActionButton: true,
+                onPressed: () {},
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
+              TGridLayout(
+                  itemCount: 4,
+                  itemBuilder: (_, index) => const TProductCardVertical()),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              )
+            ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }
