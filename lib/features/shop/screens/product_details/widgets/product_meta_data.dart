@@ -55,7 +55,7 @@ class TProductMetaData extends StatelessWidget {
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),
-        const TProductTitleText(title: 'Zin || black shirt'),
+        const TProductTitleText(title: 'Nike Green Shoes'),
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),
@@ -85,7 +85,7 @@ class TProductMetaData extends StatelessWidget {
               width: 5,
             ),
             TBrandTiltleWithVerifiedIcon(
-              title: 'Zin ||',
+              title: 'Nike',
               brandTextSize: TextSizes.medium,
             ),
           ],
