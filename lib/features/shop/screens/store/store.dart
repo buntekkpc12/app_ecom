@@ -23,6 +23,7 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return DefaultTabController(
       length: 6,
       child: Scaffold(
@@ -37,6 +38,7 @@ class StoreScreen extends StatelessWidget {
             ),
           ],
         ),
+        backgroundColor: dark ? TColors.dark : TColors.light,
         body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) {
             return [
