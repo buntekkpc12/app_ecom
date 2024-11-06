@@ -30,6 +30,7 @@ class TImages {
 
   //profile
   static const String user = "assets/images/user/profile2.png";
+  static const String user1 = "assets/images/user/user.png";
 
   //icon logo category
   static const String sportIcon = "assets/icons/categories/sportIcon.png";
