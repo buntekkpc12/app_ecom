@@ -1,9 +1,12 @@
 import 'package:ecommerce/common/widgets/Icons/t_circular_icon.dart';
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/texts/product_price_text.dart';
+import 'package:ecommerce/features/shop/screens/card/widgets/card_items.dart';
+import 'package:ecommerce/features/shop/screens/checkout/checkout.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/widgets/products/cart/add_remove_button.dart';
 import '../../../../common/widgets/products/cart/card_item.dart';
@@ -25,41 +28,15 @@ class CardScreen extends StatelessWidget {
         ),
         showBackArrow: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
-        child: ListView.separated(
-          shrinkWrap: true,
-          itemCount: 10,
-          separatorBuilder: (_, __) => const SizedBox(
-            height: TSizes.spaceBtwSections,
-          ),
-          itemBuilder: (_, index) => const Column(
-            children: [
-              TCardItem(),
-              SizedBox(height: TSizes.spaceBtwItems),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 70,
-                      ),
-                      TProductQuantityWithAddRemove(),
-                    ],
-                  ),
-                  TProductPriceText(price: '244')
-                ],
-              )
-            ],
-          ),
-        ),
+      body: const Padding(
+        padding: EdgeInsets.all(TSizes.defaultSpace),
+        child: TCartItems(),
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
-          onPressed: () {},
-          child: Text('Checkout \$244.0'),
+          onPressed: () => Get.to(() => const CheckoutScreen()),
+          child: const Text('Checkout \$244.0'),
         ),
       ),
     );

@@ -5,6 +5,7 @@ import 'package:ecommerce/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/authentication/screens/login/login.dart';
 import 'package:ecommerce/features/personlization/screens/address/address.dart';
+import 'package:ecommerce/features/shop/screens/order/order.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
@@ -72,7 +73,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subtitle: 'In-progress and Completed Orders',
-                    onTap: () {},
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bank,

@@ -102,4 +102,12 @@ class TImages {
   //product review
 
   static const String userProfileImage2 = "assets/images/reviews/profile1.png";
+
+  //payment icon
+  static const String creditCard = "assets/icons/payment/creditcard.png";
+  static const String paypal = "assets/icons/payment/paypal.png";
+  static const String masterCard = "assets/icons/payment/mastercard.png";
+  static const String visaCard = "assets/icons/payment/visa.png";
+  static const String successfulPaymentIcon =
+      "assets/icons/payment/successful.png";
 }
