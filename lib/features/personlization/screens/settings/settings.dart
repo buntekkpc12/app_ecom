@@ -1,6 +1,5 @@
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/container/primary_header_container.dart';
-import 'package:ecommerce/common/widgets/images/t_circular_image.dart';
 import 'package:ecommerce/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/authentication/screens/login/login.dart';
@@ -13,7 +12,6 @@ import 'package:get/get.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
 import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 
 class SettingsScreen extends StatelessWidget {

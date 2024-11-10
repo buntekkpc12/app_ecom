@@ -1,15 +1,10 @@
-import 'package:ecommerce/common/widgets/Icons/t_circular_icon.dart';
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
-import 'package:ecommerce/common/widgets/texts/product_price_text.dart';
 import 'package:ecommerce/features/shop/screens/card/widgets/card_items.dart';
 import 'package:ecommerce/features/shop/screens/checkout/checkout.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
 
-import '../../../../common/widgets/products/cart/add_remove_button.dart';
-import '../../../../common/widgets/products/cart/card_item.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 

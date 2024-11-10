@@ -1,6 +1,5 @@
 import 'package:ecommerce/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:ecommerce/common/widgets/products/ratings/rating_indicator.dart';
-import 'package:ecommerce/utils/constants/enums.dart';
 import 'package:ecommerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
@@ -61,11 +60,11 @@ class UserReviewCard extends StatelessWidget {
           trimMode: TrimMode.Line,
           trimExpandedText: 'show less',
           trimCollapsedText: 'show more',
-          moreStyle: const TextStyle(
+          moreStyle: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: TColors.primary),
-          lessStyle: const TextStyle(
+          lessStyle: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
               color: TColors.primary),
@@ -101,11 +100,11 @@ class UserReviewCard extends StatelessWidget {
                   trimMode: TrimMode.Line,
                   trimExpandedText: 'show less',
                   trimCollapsedText: 'show more',
-                  moreStyle: const TextStyle(
+                  moreStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: TColors.primary),
-                  lessStyle: const TextStyle(
+                  lessStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: TColors.primary),

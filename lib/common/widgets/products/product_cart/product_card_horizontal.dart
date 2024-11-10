@@ -10,7 +10,6 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../styles/shadows.dart';
 import '../../Icons/t_circular_icon.dart';
 
 class TProductCardHorizontal extends StatelessWidget {
@@ -56,7 +55,7 @@ class TProductCardHorizontal extends StatelessWidget {
                             .apply(color: TColors.black)),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   top: 0,
                   right: 0,
                   child: TCircularIcon(

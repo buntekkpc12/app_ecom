@@ -1,7 +1,3 @@
-import 'package:ecommerce/common/widgets/Icons/t_circular_icon.dart';
-import 'package:ecommerce/common/widgets/appbar/appbar.dart';
-import 'package:ecommerce/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:ecommerce/common/widgets/images/t_rounded_image.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/shop/screens/product_details/widgets/bottom_add_to_card_widget.dart';
 import 'package:ecommerce/features/shop/screens/product_details/widgets/product_attributes.dart';
@@ -16,7 +12,6 @@ import 'package:readmore/readmore.dart';
 import 'package:get/get.dart';
 
 import '../../../../utils/constants/colors.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class ProductDetailScreen extends StatelessWidget {

@@ -1,15 +1,8 @@
 import 'package:ecommerce/features/authentication/controllers.onboarding/onboarding_controller.dart';
-import 'package:ecommerce/utils/constants/colors.dart';
-import 'package:ecommerce/utils/constants/enums.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
-import 'package:ecommerce/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/helpers/helper_functions.dart';
-import '../../controllers.onboarding/onboarding_controller.dart';
 import 'Widgets/onboarding_dot_navigation.dart';
 import 'Widgets/onboarding_next_button.dart';
 import 'Widgets/onboarding_page.dart';
