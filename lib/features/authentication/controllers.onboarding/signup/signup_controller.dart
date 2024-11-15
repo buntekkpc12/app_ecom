@@ -1,3 +1,5 @@
+import 'package:ecommerce/utils/constants/image_strings.dart';
+import 'package:ecommerce/utils/popups/full_screen_loader.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +16,10 @@ class SignupController extends GetxController {
   GlobalKey<FormState> signupFormKey = GlobalKey<FormState>();
 
   Future<void> signup() async {
-    try {} catch (e) {
+    try {
+      TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.productsIllustration);
+      final isConnected = await NetworkMa
+    } catch (e) {
     } finally {}
   }
 }
