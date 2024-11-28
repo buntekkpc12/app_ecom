@@ -1,11 +1,15 @@
 import 'package:ecommerce/common/widgets/loaders/loaders.dart';
 import 'package:ecommerce/data/repositories/authentication/authentication_repository.dart';
+import 'package:ecommerce/data/repositories/user/user_repository.dart';
+import 'package:ecommerce/features/authentication/screens/signup/verify_email.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/network_manager.dart';
 import 'package:ecommerce/utils/popups/full_screen_loader.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../data/repositories/user/user_model.dart';
 
 class SignupController extends GetxController {
   static SignupController get instance => Get.find();
@@ -39,7 +43,7 @@ class SignupController extends GetxController {
         return;
       }
 
-      final user = AuthenticationRepository.instance
+      final userCredential = await AuthenticationRepository.instance
           .registerWithEmailAndPassword(
               email.text.trim(), password.text.trim());
 
@@ -52,6 +56,14 @@ class SignupController extends GetxController {
         phoneNumber: phoneNumber.text.trim(),
         profilePicture: '',
       );
+
+      final userRepository = Get.put(UserRepository());
+      userRepository.saveUserRecord(newUser);
+
+      TLoaders.successSnackBar(
+          title: 'Congratulations',
+          message: 'Your account has been created! Verify email to continue');
+      Get.to(() => const VerifyEmailScreen());
     } catch (e) {
       TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     } finally {

@@ -1,4 +1,3 @@
-import 'package:ecommerce/features/authentication/controllers.onboarding/signup/signup_controller.dart';
 import 'package:ecommerce/features/authentication/screens/signup/verify_email.dart';
 import 'package:ecommerce/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
 import 'package:ecommerce/utils/validators/validation.dart';
@@ -8,6 +7,7 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
+import '../../../controllers/signup/signup_controller.dart';
 
 class TSignupForm extends StatelessWidget {
   const TSignupForm({

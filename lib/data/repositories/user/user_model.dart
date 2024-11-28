@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommerce/utils/formatters/formatter.dart';
 
 class UserModel {
@@ -31,5 +32,40 @@ class UserModel {
     String camelCaseUsername = "$firstname$lastname";
     String usernameWithPrefix = "cwt_ $camelCaseUsername";
     return usernameWithPrefix;
+  }
+
+  static UserModel empty() => UserModel(
+      id: '',
+      firstname: '',
+      lastname: '',
+      username: '',
+      email: '',
+      phoneNumber: '',
+      profilePicture: '');
+
+  Map<String, dynamic> toJson() {
+    return {
+      'FirstName': firstname,
+      'LastName': lastname,
+      'UserName': username,
+      'Email': email,
+      'PhoneNumber': phoneNumber,
+      'ProfilePicture': profilePicture,
+    };
+  }
+
+  factory UserModel.fromSnapshot(
+      DocumentSnapshot<Map<String, dynamic>> document) {
+    if (document.data() != null) {
+      final data = document.data()!;
+      return UserModel(
+          id: document.id,
+          firstname: data['FirstName'] ?? '',
+          lastname: data['LastName'] ?? '',
+          username: data['Username'] ?? '',
+          email: data['email'] ?? '',
+          phoneNumber: data['PhoneNumber'] ?? '',
+          profilePicture: data['ProfilePicture'] ?? '');
+    }
   }
 }

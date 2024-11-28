@@ -1,7 +1,10 @@
+import 'package:ecommerce/data/repositories/user/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import '../../../utils/exceptions/firebase_exceptions.dart';
 
 class UserRepository extends GetxController {
   static UserRepository get instance => Get.find();
