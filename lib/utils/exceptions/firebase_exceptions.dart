@@ -35,6 +35,10 @@ class TFirebaseException implements Exception {
         return 'Invalid verification ID. Please request a new verification code';
       case 'Captcha-check-failed':
         return 'The reCAPTCHA response is invalid. Please try again';
+      case 'app-not-authorized':
+        return 'The app is not authorized to use Firebase Authentication with the provided API key.';
+      case 'keychain-error':
+        return 'A keychain error occurred. Please check the keychain and try again.';
       default:
         return 'An unknown error occurred. Please try again later.';
     }
