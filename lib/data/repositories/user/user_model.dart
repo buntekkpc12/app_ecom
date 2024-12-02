@@ -66,6 +66,8 @@ class UserModel {
           email: data['email'] ?? '',
           phoneNumber: data['PhoneNumber'] ?? '',
           profilePicture: data['ProfilePicture'] ?? '');
+    } else {
+      return UserModel.empty();
     }
   }
 }

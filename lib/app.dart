@@ -15,7 +15,6 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      initialBinding: GeneralBindings(),
       home: const Scaffold(
         backgroundColor: TColors.primary,
         body: Center(
